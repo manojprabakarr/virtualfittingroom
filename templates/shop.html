@@ -6,6 +6,14 @@
             font-size: larger;
             font-family: monospace;
           }
+          .head1{
+          
+            font-family: monospace;
+            font-size: large;
+            margin-left: 10px;
+
+          }
+         
         @media only screen and (min-width: 768px) {
             /* dessktop*/
             .content{
@@ -20,7 +28,7 @@
 
         @media only screen and (max-width: 768px) {
             .content{
-              margin-left: 22px;
+              margin-left: 20px;
               margin-top: 20px;
               margin-bottom: 20px;
             }
@@ -50,10 +58,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto" style="margin-right: 10%;">
                 <li class="nav-item active">
-                  <a  style="font-size: large; "class="nav-link" href="/index.html">Home</a>
+                  <a  style="font-size: large; "class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a  style="font-size: large; " class="nav-link" href="Shop.html">Shop</a>
+                  <a  style="font-size: large; " class="nav-link" href="/shop">Shop</a>
                 </li>
                
                 
@@ -66,36 +74,40 @@
 
           <div class="content" >
             <!--1-->
-               <div class="card" style="width: 18rem;">
-                      <img class="card-img-top" src= "{{url_for('static', filename='63.jpg')}}"  alt="Card image cap">
+               <div class="card" style="width: 18rem; align-items:center;justify-content:center">
+                      <img class="card-img-top"style="height:60%" src= "{{url_for('static', filename='538.jpg')}}"  alt="Card image cap">
              
                           <div class="card-body">
                
                             <h5 class="card-title">Adidas t-Shirts</h5>
-                           <p  id="price" class="card-text">price:$120</p><br/><br/><br/>
-                           <a href="/buy" class="btn btn-primary">Buy now</a>
-                           <a href="/trail" class="btn btn-primary">  
-                             trynow
-                           </a>
+                           <p  id="price" class="card-text">price:$120</p>
+                           <a href="/buy"  id="btn1"  class="btn btn-primary">Buy now</a>
+                           <h4 class="head1">(or)</h4>
+                           <form action="/forward" method="post">
+                          
+                             <button name="forwardBtn"    class="btn btn-primary" type="submit">Trynow</button> </form>
                           </div>
                 </div>
 
 
                  <!--2-->
-                 <div class="card" style="width:18rem;margin-left:25px;">
+                 <div class="card" style="width:18rem;margin-left:25px;align-items:center;justify-content:center"">
                                  <img class="card-img-top" src= "{{url_for('static', filename='510.jpg')}}" alt="Card image cap">
              
                           <div class="card-body">
                  
                             <h5 class="card-title">Roadster t-Shirts</h5>
                              <p id="price" class="card-text">price:$180</p>
-                              <a href="/buy" class="btn btn-primary">Buy now</a>
-                              <a href="/trail2" class="btn btn-primary">Try Now</a>
+                             <a href="/buy" id="btn1"   class="btn btn-primary">Buy now</a>
+                             <h4 class="head1">(or)</h4>
+                              <form action="/p1" method="post">
+                               
+                                <button name="p1"   class="btn btn-primary" type="submit">Trynow</button> </form>
                          </div>
                  </div>
 
                <!--3-->
-                <div class="card" style="width: 18rem; margin-left:25px;">
+                <div class="card" style="width: 18rem; margin-left:25px;align-items:center;justify-content:center"">
                   <img class="card-img-top" src= "{{url_for('static', filename='512.jpg')}}" alt="Card image cap">
                
                   <div class="card-body">
@@ -103,64 +115,80 @@
                     <h5 class="card-title">Symbol t-Shirts</h5>
                     <p id="price" class="card-text">price:$120</p>
                    
-                    <a href="/buy" class="btn btn-primary">Buy now</a>
-                    <a  href="/trail3" class="btn btn-primary">Try now</a>
+                    <a href="/buy" id="btn1"   class="btn btn-primary">Buy now</a>
+                    <h4 class="head1">(or)</h4>
+                    <form action="/p2" method="post">
+                      
+                      <button name="p2"    class="btn btn-primary" type="submit">Trynow</button> </form>
                   </div>
                
           </div>
           <!--4-->
-          <div class="card" style="width: 18rem; margin-left:25px; margin-top:20px;">
+          <div class="card" style="width: 18rem; margin-left:25px; margin-top:20px;align-items:center;justify-content:center"">
             <img class="card-img-top" src= "{{url_for('static', filename='519.jpg')}}" alt="Card image cap">
          
             <div class="card-body">
              
               <h5 class="card-title">Chinese Tshirt</h5>
               <p id="price" class="card-text">price:$220</p>
-              <a href="/buy" class="btn btn-primary">Buy now</a>
-              <a  href="/trail4" class="btn btn-primary">Try now</a>
+              <a href="/buy" id="btn1"  class="btn btn-primary">Buy now</a>
+              <h4 class="head1">(or)</h4>
+                    <form action="/p3" method="post">
+                   
+                      <button name="p3"   class="btn btn-primary" type="submit">Trynow</button> </form>
             </div>
          
     </div>
 
           <!--5-->
-          <div class="card" style="width: 18rem;margin-left:25px;margin-top:20px;">
+          <div class="card" style="width: 18rem;margin-left:25px;margin-top:20px;align-items:center;justify-content:center"">
             <img class="card-img-top"  src= "{{url_for('static', filename='520.jpg')}}" alt="Card image cap">
          
             <div class="card-body">
              
               <h5 class="card-title">Highlander Tshirt</h5>
               <p id="price" class="card-text">price:$250</p>
-              <a href="/buy" class="btn btn-primary">Buy now</a>
-              <a  href="/trail4" class="btn btn-primary">Try now</a>
+              <a href="/buy" id="btn1"  class="btn btn-primary">Buy now</a>
+              <h4 class="head1">(or)</h4>
+              <form action="/p4" method="post">
+              
+                <button name="p4"   class="btn btn-primary" type="submit">Trynow</button> </form>
             </div>
          
     </div>
 
      <!--6-->
-     <div class="card" style="width: 18rem;margin-left:25px;margin-top:20px;">
+     <div class="card" style="width: 18rem;margin-left:25px;margin-top:20px;align-items:center;justify-content:center"">
         <img class="card-img-top" src= "{{url_for('static', filename='544.jpg')}}" alt="Card image cap">
      
         <div class="card-body">
          
           <h5 class="card-title">Tshirt</h5>
           <p id="price" class="card-text">price:$120</p>
-          <a href="/buy" class="btn btn-primary">Buy now</a>
-          <a  href="/trail4" class="btn btn-primary">Try now</a>
+          <a href="/buy" id="btn1"   class="btn btn-primary">Buy now</a>
+          <h4 class="head1">(or)</h4>
+          <form action="/p5" method="post">
+           
+            <button name="p5"   class="btn btn-primary" type="submit">Trynow</button> </form>
         </div>
      
 </div>
           
 
            <!--7-->
-           <div class="card" style="width: 18rem;margin-left:25px;margin-top:20px;">
+           <div class="card" style="width: 18rem;margin-left:25px;margin-top:20px;align-items:center;justify-content:center">
             <img class="card-img-top"  src= "{{url_for('static', filename='549.jpg')}}" alt="Card image cap">
          
             <div class="card-body">
              
               <h5 class="card-title">Cotton Trousers</h5>
               <p id="price" class="card-text">price:$100</p>
-              <a href="/buy" class="btn btn-primary">Buy now</a>
-              <a  href="/trail4" class="btn btn-primary">Try now</a>
+              <a href="/buy" id="btn1"   class="btn btn-primary">Buy now</a>
+              <h4 class="head1">(or)</h4>
+              
+              <form action="/p6" method="post">
+               
+                <button name="p6"    class="btn btn-primary" type="submit">Trynow</button> </form>
             </div>
          
     </div>
