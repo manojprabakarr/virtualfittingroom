@@ -83,7 +83,7 @@ def buy():
              address = request.form.get('address')
 
         msg = Message(
-            subject=f"Mail from {name}", body=f"Name: {name}\nE-Mail: {email}\nPhone: {phone}\n\n\n{address}", sender=email, recipients=['testmail.reference@gmail.com'])
+            subject=f"Mail from {name}", body=f"Name: {name}\nE-Mail: {email}\nPhone: {phone}\n\n\n{address}", sender=email, recipients=['mailid'])
         mail.send(msg)
         return render_template("buy.html", success=True)
 
